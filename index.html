@@ -64,19 +64,119 @@
   <section class="bg-[#0f0f15] py-16 border-y border-[#1c1c26]">
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-2xl md:text-3xl font-bold text-center mb-3">Antes → Depois</h2>
-      <p class="text-gray-400 text-center mb-10">A mesma loja, o mesmo produto — só que agora vendendo.</p>
-      <div class="grid md:grid-cols-2 gap-6">
-        <!-- placeholders: Brenno troca pelas reformas reais -->
-        <div class="card rounded-2xl overflow-hidden">
-          <div class="aspect-video bg-[#1a1a22] flex items-center justify-center text-gray-600 text-sm">[ ANTES — print do anúncio feio ]</div>
-          <div class="p-4 text-center text-sm text-red-400 font-semibold">😴 Feio, incompleto, invisível</div>
+      <p class="text-gray-400 text-center mb-12">A mesma loja, o mesmo produto — só que agora vendendo.</p>
+
+      <!--
+        COMO PREENCHER (Brenno): coloque os arquivos em  imagens/antes-depois/
+          reforma-1-antes.jpg   reforma-1-depois.jpg
+          reforma-2-antes.jpg   reforma-2-depois.jpg
+          reforma-3-antes.jpg   reforma-3-depois.jpg
+        Enquanto não existir a imagem, aparece um slot "reservado" elegante (fallback automático).
+      -->
+
+      <div class="space-y-8">
+
+        <!-- REFORMA 1 -->
+        <div class="card rounded-3xl p-4 md:p-6">
+          <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+            <div>
+              <div class="flex items-center justify-between mb-2 px-1">
+                <span class="text-xs font-semibold uppercase tracking-wide text-red-400">Antes</span>
+                <span class="text-xs text-gray-500">anúncio original</span>
+              </div>
+              <div class="aspect-[4/3] rounded-2xl bg-[#121219] flex items-center justify-center overflow-hidden ring-1 ring-[#23232e]">
+                <img src="imagens/antes-depois/reforma-1-antes.jpg" alt="Anúncio antes da reforma" loading="lazy"
+                     class="w-full h-full object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                <div class="hidden w-full h-full items-center justify-center text-center text-gray-600 text-sm px-4">📷 print do anúncio feio<br><span class="text-xs text-gray-700">reforma-1-antes.jpg</span></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-2 px-1">
+                <span class="text-xs font-semibold uppercase tracking-wide" style="color:var(--amarelo)">Depois</span>
+                <span class="text-xs text-gray-500">reforma do Estúdio</span>
+              </div>
+              <div class="aspect-[4/3] rounded-2xl bg-[#121219] flex items-center justify-center overflow-hidden ring-1" style="--tw-ring-color:#ffe60044;box-shadow:0 0 40px -12px #ffe60033">
+                <img src="imagens/antes-depois/reforma-1-depois.jpg" alt="Anúncio depois da reforma" loading="lazy"
+                     class="w-full h-full object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                <div class="hidden w-full h-full items-center justify-center text-center text-gray-600 text-sm px-4">✨ reforma do Estúdio<br><span class="text-xs text-gray-700">reforma-1-depois.jpg</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 justify-center mt-4">
+            <span class="text-xs font-medium bg-white/5 border border-[#2a2a36] rounded-full px-3 py-1">📸 Foto</span>
+            <span class="text-xs font-medium bg-white/5 border border-[#2a2a36] rounded-full px-3 py-1">🔤 Título</span>
+            <span class="text-xs font-medium bg-white/5 border border-[#2a2a36] rounded-full px-3 py-1">📋 Ficha</span>
+          </div>
         </div>
-        <div class="card rounded-2xl overflow-hidden border-[var(--amarelo)]/40" style="border-color:#ffe60055">
-          <div class="aspect-video bg-[#1a1a22] flex items-center justify-center text-gray-600 text-sm">[ DEPOIS — reforma do Estúdio ]</div>
-          <div class="p-4 text-center text-sm font-semibold" style="color:var(--amarelo)">🚀 Bonito, completo, convertendo</div>
+
+        <!-- REFORMA 2 -->
+        <div class="card rounded-3xl p-4 md:p-6">
+          <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+            <div>
+              <div class="flex items-center justify-between mb-2 px-1">
+                <span class="text-xs font-semibold uppercase tracking-wide text-red-400">Antes</span>
+                <span class="text-xs text-gray-500">anúncio original</span>
+              </div>
+              <div class="aspect-[4/3] rounded-2xl bg-[#121219] flex items-center justify-center overflow-hidden ring-1 ring-[#23232e]">
+                <img src="imagens/antes-depois/reforma-2-antes.jpg" alt="Anúncio antes da reforma" loading="lazy"
+                     class="w-full h-full object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                <div class="hidden w-full h-full items-center justify-center text-center text-gray-600 text-sm px-4">📷 print do anúncio feio<br><span class="text-xs text-gray-700">reforma-2-antes.jpg</span></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-2 px-1">
+                <span class="text-xs font-semibold uppercase tracking-wide" style="color:var(--amarelo)">Depois</span>
+                <span class="text-xs text-gray-500">reforma do Estúdio</span>
+              </div>
+              <div class="aspect-[4/3] rounded-2xl bg-[#121219] flex items-center justify-center overflow-hidden ring-1" style="--tw-ring-color:#ffe60044;box-shadow:0 0 40px -12px #ffe60033">
+                <img src="imagens/antes-depois/reforma-2-depois.jpg" alt="Anúncio depois da reforma" loading="lazy"
+                     class="w-full h-full object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                <div class="hidden w-full h-full items-center justify-center text-center text-gray-600 text-sm px-4">✨ reforma do Estúdio<br><span class="text-xs text-gray-700">reforma-2-depois.jpg</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 justify-center mt-4">
+            <span class="text-xs font-medium bg-white/5 border border-[#2a2a36] rounded-full px-3 py-1">📸 Foto</span>
+            <span class="text-xs font-medium bg-white/5 border border-[#2a2a36] rounded-full px-3 py-1">🔤 Título</span>
+            <span class="text-xs font-medium bg-white/5 border border-[#2a2a36] rounded-full px-3 py-1">📋 Ficha</span>
+          </div>
         </div>
+
+        <!-- REFORMA 3 -->
+        <div class="card rounded-3xl p-4 md:p-6">
+          <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+            <div>
+              <div class="flex items-center justify-between mb-2 px-1">
+                <span class="text-xs font-semibold uppercase tracking-wide text-red-400">Antes</span>
+                <span class="text-xs text-gray-500">anúncio original</span>
+              </div>
+              <div class="aspect-[4/3] rounded-2xl bg-[#121219] flex items-center justify-center overflow-hidden ring-1 ring-[#23232e]">
+                <img src="imagens/antes-depois/reforma-3-antes.jpg" alt="Anúncio antes da reforma" loading="lazy"
+                     class="w-full h-full object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                <div class="hidden w-full h-full items-center justify-center text-center text-gray-600 text-sm px-4">📷 print do anúncio feio<br><span class="text-xs text-gray-700">reforma-3-antes.jpg</span></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-2 px-1">
+                <span class="text-xs font-semibold uppercase tracking-wide" style="color:var(--amarelo)">Depois</span>
+                <span class="text-xs text-gray-500">reforma do Estúdio</span>
+              </div>
+              <div class="aspect-[4/3] rounded-2xl bg-[#121219] flex items-center justify-center overflow-hidden ring-1" style="--tw-ring-color:#ffe60044;box-shadow:0 0 40px -12px #ffe60033">
+                <img src="imagens/antes-depois/reforma-3-depois.jpg" alt="Anúncio depois da reforma" loading="lazy"
+                     class="w-full h-full object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                <div class="hidden w-full h-full items-center justify-center text-center text-gray-600 text-sm px-4">✨ reforma do Estúdio<br><span class="text-xs text-gray-700">reforma-3-depois.jpg</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 justify-center mt-4">
+            <span class="text-xs font-medium bg-white/5 border border-[#2a2a36] rounded-full px-3 py-1">📸 Foto</span>
+            <span class="text-xs font-medium bg-white/5 border border-[#2a2a36] rounded-full px-3 py-1">🔤 Título</span>
+            <span class="text-xs font-medium bg-white/5 border border-[#2a2a36] rounded-full px-3 py-1">📋 Ficha</span>
+          </div>
+        </div>
+
       </div>
-      <p class="text-center text-gray-500 text-sm mt-6">*Espaço reservado — aqui entram as reformas reais do Brenno.</p>
+      <p class="text-center text-gray-500 text-sm mt-8">Reformas reais. Solte suas imagens em <code class="text-gray-400">imagens/antes-depois/</code> e elas entram aqui.</p>
     </div>
   </section>
 
